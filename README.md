@@ -43,18 +43,23 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet.
 
 Only the Local machine can accept connections from the Internet.  Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- 23.83.131.208
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by SSH.
+
+- Which machine did you allow to access your ELK VM? What was its IP address?
+- Only my local machine was allowed to access the ELK VM and its IP address was 23.83.131.208. Other VMs that are in this network are allowed to SSH into the ELK server as well.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name     | Publicly Accessible | Allowed IP Addresses                    |
+|----------|---------------------|----------------------                   |
+| Jump Box | No                  | 10.0.0.4-Virtual Network                |
+| WEB 1 & 2| Yes                 | Virtual Network                         |
+|Elk Server| No                  |23.83.131.208 - 10.1.0.4 - VirtualNetwork|
+
+Each of the access policies listed above, are there to keep outside/unwanted access out and keep our projects safe. It only allows traffic from my local machine and then once I am in the Virtual Network I can SSH from one VM to the other and attach to dockers, ansibles, etc, if needed.
+
 
 ### Elk Configuration
 
@@ -93,12 +98,14 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- This is the path to the playbook: /etc/ansible/file/filebeat-configuration.yml
-- 
+- _Which file is the playbook? Where do you copy it? 
+ /etc/ansible/file/filebeat-configuration.yml
+
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-You would have to edit the /etc/ansible/host file and add the server ip addresses to it
+You would have to edit the /etc/ansible/host file and add the server ip addresses 
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
+{IP ADDRESS}:5601/app/kibana
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+-As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+ansible-playbook {playbook you wish to run}
