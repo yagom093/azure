@@ -74,7 +74,7 @@ Launch docker container: elk
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-<figure><img src=“/diagrams/elkserver.png”><figcaption></figcaption></figure>
+<figure><img src=/diagrams/elkserver.png><figcaption></figcaption></figure>
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
