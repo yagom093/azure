@@ -31,12 +31,13 @@ Metricbeat is a shipper you can install on your servers to periodically collect 
 
 The configuration details of each machine may be found below.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | VM       | 10.0.0.4   | Linux            |
-| Web1     | VM/Docker| 10.0.0.5   | Linux            |
-| Web2     | VM/docker| 10.0.0.6   | Linux            |
-|Elk-Server| Server   | 10.1.0.4   | Linux            |
+| Name     | Function | IP Address   |Operating System|
+|----------|----------|--------------|----------------|
+                      |52.173.130.102|
+| Jump Box | VM       | 10.0.0.4     | Linux          |
+| Web1     | VM/Docker| 10.0.0.5     | Linux          |
+| Web2     | VM/docker| 10.0.0.6     | Linux          |
+|Elk-Server| Server   | 10.1.0.4     | Linux          |
 
 ### Access Policies
 
