@@ -66,11 +66,12 @@ Each of the access policies listed above, are there to keep outside/unwanted acc
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because you can deploy multiple commands, changes, updates, etc, to multiple machines at once.
 
 The playbook implements the following tasks:
-Install: docker.io
-Install: python-pip
-Install: docker
-Command: sysctl -w vm.max_map_count=262144
-Launch docker container: elk
+
+-Install: docker.io
+-Install: python-pip
+-Install: docker module
+-Command: sysctl -w vm.max_map_count=262144
+-Launch docker container: elk
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
