@@ -2,8 +2,6 @@
 
 The files in this repository were used to configure the network depicted below.
 
-
-
 <figure><img src=/diagrams/diagram2.PNG><figcaption></figcaption></figure>
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the elk.yml file may be used to install only certain pieces of it, such as Filebeat.
@@ -99,7 +97,7 @@ SSH into the control node and follow the steps below:
 - Update the host IP addresses in the config file to include the IP addresses of your web servers.
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it? 
  /etc/ansible/file/filebeat-configuration.yml
 
