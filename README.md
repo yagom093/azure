@@ -10,7 +10,7 @@ The playbook files: DVWA, Elk, Filebeat, Metricbeat.
 
 *[Install-Elk](https://github.com/yagom093/azure/blob/main/install-elk.yml) 
 
-*([Filebeat-Playbook](https://github.com/yagom093/azure/blob/main/Ansible/filebeat-configuration.yml)
+*[Filebeat-Playbook](https://github.com/yagom093/azure/blob/main/Ansible/filebeat-configuration.yml)
 
 *[Metricbeat](https://github.com/yagom093/azure/blob/main/Ansible/metricbeat-configuration.yml)
 
