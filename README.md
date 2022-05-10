@@ -4,7 +4,14 @@ The files in this repository were used to configure the network depicted below.
 
 <figure><img src=/diagrams/diagram2.PNG><figcaption></figcaption></figure>
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the elk.yml file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the (yaml) file may be used to install only certain pieces of it, such as Ansible, DVWA servers, or Elk Stack with Filebeat and Metricbeat.
+
+The playbook files: DVWA, Elk, Filebeat, metricbeat.
+[Install-Elk](https://github.com/yagom093/azure/blob/main/install-elk.yml) 
+[Filebeat-Playbook](https://github.com/yagom093/azure/blob/main/Ansible/filebeat-configuration.yml)
+[Metricbeat](https://github.com/yagom093/azure/blob/main/Ansible/metricbeat-configuration.yml)
+[DVWA](https://github.com/yagom093/azure/blob/main/DVWA)
+
 
 This document contains the following details:
 - Description of the Topologu
@@ -78,8 +85,12 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-VM1 10.0.0.5
-VM2 10.0.0.6
+
+|Server Name | IP Address    |
+| VM-1       | 10.0.0.5      | 
+| VM-2       | 10.0.0.6      | 
+| VM-3       | 10.0.0.8      |
+
 
 We have installed the following Beats on these machines:
 Filebeat
@@ -91,6 +102,18 @@ Metricbeat is a shipper that you can install on your servers to collect metrics 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
+
+In order to Configure the Jumpbox to run Docker with an Ansible control node.
+Start by installing `docker.io` on your Jump box.
+Run `sudo apt update` then `sudo apt install docker.io`
+Verify that the Docker service is running.
+Run `sudo systemctl status docker`. (Note: If the Docker service is not running, start it with `sudo systemctl start docker`.)
+Once Docker is installed, pull the container cyberxsecurity/ansible.
+Run sudo docker pull `cyberxsecurity/ansible`.
+You can also switch to the root user so you don't have to keep typing sudo.
+Run `sudo su`.
+Launch the Ansible container and connect to it using the appropriate Docker commands.
+Run `docker run -ti cyberxsecurity/ansible:latest bash` to start and connect to the container.
 
 SSH into the control node and follow the steps below:
 - Copy the filebeat-configuration.yml and install-elk.yml file to /etc/ansible/file.
