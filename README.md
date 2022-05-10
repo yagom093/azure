@@ -7,10 +7,10 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the (yaml) file may be used to install only certain pieces of it, such as Ansible, DVWA servers, or Elk Stack with Filebeat and Metricbeat.
 
 The playbook files: DVWA, Elk, Filebeat, metricbeat.
-[Install-Elk](https://github.com/yagom093/azure/blob/main/install-elk.yml) 
-[Filebeat-Playbook](https://github.com/yagom093/azure/blob/main/Ansible/filebeat-configuration.yml)
-[Metricbeat](https://github.com/yagom093/azure/blob/main/Ansible/metricbeat-configuration.yml)
-[DVWA](https://github.com/yagom093/azure/blob/main/DVWA)
+-[Install-Elk](https://github.com/yagom093/azure/blob/main/install-elk.yml) 
+-[Filebeat-Playbook](https://github.com/yagom093/azure/blob/main/Ansible/filebeat-configuration.yml)
+-[Metricbeat](https://github.com/yagom093/azure/blob/main/Ansible/metricbeat-configuration.yml)
+-[DVWA](https://github.com/yagom093/azure/blob/main/DVWA)
 
 
 This document contains the following details:
